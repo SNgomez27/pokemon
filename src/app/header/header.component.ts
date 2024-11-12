@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
 
+  toggleNav: boolean = false;
+  mostrarNav(){
+    this.toggleNav = !this.toggleNav;
+  }
 }

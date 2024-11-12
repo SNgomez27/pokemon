@@ -1,0 +1,34 @@
+<form method="post" [formGroup]="formulario" (ngSubmit)="enviar()">
+  <div>
+    <label for="name-pokemon"> nombre</label>
+    <input formControlName="name" type="text" id="name-pokemon" name="usuario" placeholder="Mete el nombre del pokemon" value="" autocomplete="on">
+    <br>
+    <br>
+  </div>
+  <div>
+  <label for="categoria">Tipo</label>
+<select formControlName="categoria" id="categoria" name="tipo" required>
+  <option value="Fire" selected>Fuego</option>
+  <option value="Water">Agua</option>
+  <option value="Ground">Tierra</option>
+  <option value="Psychic">Psíquico</option>
+  <option value="Ghost">Fantasma</option>
+  <option value="Steel">Acero</option>
+  <option value="Flying">Volador</option>
+  <option value="Ice">Hielo</option>
+  <option value="Grass">Planta</option>
+  <option value="Bug">Bicho</option>
+  <option value="Electric">Electrico</option>
+  <option value="Normal">Normal</option>
+  <option value="Rock">Roca</option>
+  <option value="Fighting">Lucha</option>
+  <option value="Fairy">Hada</option>
+  <option value="Poison">Veneno</option>
+  <option value="Dragon">Dragon</option>
+  <option value="Dark">Siniestro</option>
+</select>
+  </div>
+  <div class="button-form">
+    <button type="submit" [disabled]="formulario.invalid"> Buscar</button>
+  </div>
+</form>

@@ -1,3 +1,55 @@
-h1{
-  font-size: xxx-large;
+header{
+  padding: 12px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr ;
+  background-color: black;
+  color: white;
+  a{
+    color: white;
+  }
+  .logo{
+    span{
+      background: white;
+      border-radius: 10px;
+      color: black;
+      padding: 7px 20px;
+
+    }
+  }
+  nav{
+    width: 55%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: cadetblue;
+    button{
+      position: absolute;
+      top: 15px;
+      right: 15px;
+
+    }
+    a{
+      display: block;
+      text-decoration: none;
+      color: red;
+      width: 85%;
+      margin: 0 auto;
+      &:first-of-type{
+        margin-top: 80px;
+      }
+      &:not(:last-of-type){
+        margin-bottom: 30px;
+      }
+      &::before{
+        content: "- ";
+      }
+    }
+  }
+  .showNav{
+    text-align: right;
+    button{
+      margin-right: 10px;
+    }
+  }
 }

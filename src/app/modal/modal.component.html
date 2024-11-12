@@ -1,0 +1,9 @@
+<!-- position fixed-->
+<div id="a1" *ngIf="cerrarmodal"> <!-- fondo negro -->
+  <div id="contenido" ><!-- contenido, width 90% y q sea blanco, altura: auto-->
+    <button class="close" type="button" (click)="cerrarModal()"> x </button>
+    <h2> {{pokemon?.nombre}} </h2>
+    <img src="{{pokemon?.imagen_url}}" alt="">
+    <p>{{pokemon?.descripcion}} </p>
+  </div>
+</div>
