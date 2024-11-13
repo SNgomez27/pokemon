@@ -4,6 +4,7 @@ import { InformacionService } from '../services/modales/informacion.service';
 import {EnviarPokemonService} from '../services/pokemon/enviar-pokemon.service';
 import {PokemonApiService} from '../services/pokemon/pokemon-api.service';
 import {Router} from '@angular/router';
+import {PokemonDetailService} from '../services/pokemon/pokemon-detail.service';
 
 @Component({
   selector: 'app-informacion',
@@ -19,6 +20,7 @@ export class InformacionComponent implements OnInit{
     private informacionService: InformacionService,
     private EnviarpokemonService: EnviarPokemonService,
     private pokemonApiService: PokemonApiService,
+    private pokemonDetailService: PokemonDetailService,
     private router: Router
   ) {}
   ngOnInit() {
@@ -57,7 +59,8 @@ export class InformacionComponent implements OnInit{
   //debemos enviar el nombre
   // a traves de BehavioursSubject al component
   // pokemon-details
-  detallesPokemon(nombre: string){
+  detallesPokemon(pk: PokemonApi){
+    this.pokemonDetailService.updatePokemApi(pk)
     this.router.navigate(['detalles']);
   }
 
